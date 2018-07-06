@@ -1,7 +1,7 @@
 package com.ultrapower.juc.demo8;
 
 /**
- * @Description: 生产者消费者案例(等待唤醒机制)
+ * @Description: 生产者消费者案例(synchronized实现 等待唤醒机制)
  * @Author: HALEN(李智刚)
  * @CreateDate: 2018/7/615:25
  * <p>Copyright: Copyright (c) 2018</p>
