@@ -17,10 +17,24 @@ public class ABCCalternateTest {
         AlternateDemo ad = new AlternateDemo();
 
         new Thread(() -> {
-            for (int i = 1; i < 20; i++) {
+            for (int i = 1; i <= 20; i++) {
                 ad.loopA(i);
             }
         }, "A").start();
+
+        new Thread(() -> {
+            for (int i = 1; i <= 20; i++) {
+                ad.loopB(i);
+            }
+        }, "B").start();
+
+        new Thread(() -> {
+            for (int i = 1; i <= 20; i++) {
+                ad.loopC(i);
+
+                System.out.println("--------------------------------");
+            }
+        }, "C").start();
     }
 }
 class AlternateDemo{
@@ -42,7 +56,7 @@ class AlternateDemo{
             }
 
             //2. 打印
-            for (int i = 0; i <= 5; i++) {
+            for (int i = 1; i <= 1; i++) {
                 System.out.println(Thread.currentThread().getName() + "\t" + i + "\t" + totalLoop);
             }
 
@@ -66,7 +80,7 @@ class AlternateDemo{
             }
 
             //2. 打印
-            for (int i = 0; i <= 5; i++) {
+            for (int i = 1; i <= 1; i++) {
                 System.out.println(Thread.currentThread().getName() + "\t" + i + "\t" + totalLoop);
             }
 
@@ -90,7 +104,7 @@ class AlternateDemo{
             }
 
             //2. 打印
-            for (int i = 0; i <= 5; i++) {
+            for (int i = 1; i <= 1; i++) {
                 System.out.println(Thread.currentThread().getName() + "\t" + i + "\t" + totalLoop);
             }
 
